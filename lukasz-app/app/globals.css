@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf8;
+  --foreground: #2c2c2c;
+  --muted: #666666;
+  --primary: #4a5234;
+  --primary-dark: #3a4129;
+  --accent: #8b7355;
+  --surface: #f0ebe3;
+  --border: #d4cdc3;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --font-sans: var(--font-poppins);
+  --font-display: var(--font-angkor);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), system-ui, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: var(--font-angkor), var(--font-poppins), serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto w-full max-w-7xl px-4 md:px-8;
+  }
+
+  .section-title {
+    @apply mb-10 text-center text-3xl text-primary md:text-4xl;
+  }
+
+  .btn-primary {
+    @apply inline-block rounded-sm border-2 border-primary bg-primary px-6 py-2.5 text-sm font-medium uppercase tracking-wide text-white transition-colors hover:bg-primary-dark hover:border-primary-dark;
+  }
+
+  .btn-outline {
+    @apply inline-block rounded-sm border-2 border-primary px-6 py-2.5 text-sm font-medium uppercase tracking-wide text-primary transition-colors hover:bg-primary hover:text-white;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none !important;
+}
+
+.reveal-fade-up {
+  transform: translateY(32px);
+}
+
+.reveal-fade-down {
+  transform: translateY(-32px);
+}
+
+.reveal-fade-left {
+  transform: translateX(-32px);
+}
+
+.reveal-fade-right {
+  transform: translateX(32px);
+}
+
+.reveal-zoom {
+  transform: scale(0.94);
+}
+
+.reveal-fade-in {
+  transform: none;
+}
+
+.lazy-image-placeholder {
+  @apply absolute inset-0 bg-surface;
+  transition: opacity 0.5s ease;
+}
+
+.lazy-image-placeholder::after {
+  content: "";
+  @apply absolute inset-0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+.lazy-image {
+  @apply opacity-0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.lazy-image-loaded {
+  @apply opacity-100;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .lazy-image {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+
+  .lazy-image-placeholder {
+    display: none;
+  }
+
+  .lazy-image-placeholder::after {
+    animation: none;
+  }
+}
