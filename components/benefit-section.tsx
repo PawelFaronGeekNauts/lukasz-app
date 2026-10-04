@@ -27,7 +27,7 @@ export default function BenefitSection({
   ],
 }: BenefitSectionProps) {
   return (
-    <section className="py-16 md:py-24">
+    <section className="bg-[#1A1A1A] py-16 md:py-24 text-white">
       <div className="section-container grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <ScrollReveal variant="fade-left">
           <ImageCarousel images={carouselImages} />
@@ -35,7 +35,7 @@ export default function BenefitSection({
         <ScrollReveal variant="fade-right" delay={150}>
           <div className="flex flex-col gap-6">
             <h2 className="text-3xl text-primary md:text-4xl">{title}</h2>
-            <p className="leading-relaxed text-muted">{description}</p>
+            <p className="leading-relaxed text-white">{description}</p>
             <div>
               <Link href={buttonHref} className="btn-primary">
                 {buttonText}

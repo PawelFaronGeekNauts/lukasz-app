@@ -21,14 +21,14 @@ export default function CtaSection({
   imageSrc = "https://equipro.com.pl/wp-content/uploads/2026/09/526x526_11.jpg",
 }: CtaSectionProps) {
   return (
-    <section className="bg-surface py-16 md:py-24">
+    <section className="bg-white py-16 md:py-24 text-white">
       <div className="section-container grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <ScrollReveal variant="fade-left">
           <div className="flex flex-col gap-6">
             <h2 className="text-3xl text-primary md:text-4xl">{title}</h2>
             <p className="leading-relaxed text-muted">{description}</p>
             <div>
-              <Link href={buttonHref} className="btn-primary">
+              <Link href={buttonHref} className="btn-dark">
                 {buttonText}
               </Link>
             </div>

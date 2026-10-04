@@ -58,7 +58,7 @@ export default function ServicesSection({
   services = defaultServices,
 }: ServicesSectionProps) {
   return (
-    <section className="bg-surface py-16 md:py-24">
+    <section className="bg-white py-16 md:py-24">
       <div className="section-container">
         <ScrollReveal variant="fade-up">
           <h2 className="section-title">{title}</h2>

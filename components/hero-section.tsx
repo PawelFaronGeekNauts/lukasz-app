@@ -18,7 +18,7 @@ export default function HeroSection({
   buttonHref = "/contact",
 }: HeroSectionProps) {
   return (
-    <section className="bg-surface pt-[calc(var(--header-height)-100px)]">
+    <section className="bg-white pt-[calc(var(--header-height)-100px)]">
       <div className="section-container grid min-h-[70vh] items-center gap-8 md:grid-cols-2">
         <ScrollReveal immediate variant="fade-up" delay={100}>
           <div className="flex flex-col gap-6">
@@ -30,7 +30,7 @@ export default function HeroSection({
               {description}
             </p>
             <div>
-              <Link href={buttonHref} className="btn-primary">
+              <Link href={buttonHref} className="btn-dark">
                 {buttonText}
               </Link>
             </div>

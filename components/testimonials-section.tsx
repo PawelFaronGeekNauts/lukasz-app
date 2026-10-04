@@ -41,7 +41,7 @@ export default function TestimonialsSection({
   testimonials = defaultTestimonials,
 }: TestimonialsSectionProps) {
   return (
-    <section className="py-16 md:py-24">
+    <section className="section-dark py-16 md:py-24 text-white">
       <div className="section-container">
         <ScrollReveal variant="fade-up">
           <h2 className="section-title">{title}</h2>

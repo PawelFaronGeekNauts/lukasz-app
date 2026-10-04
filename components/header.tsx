@@ -42,7 +42,7 @@ export default function Header() {
       ref={headerRef}
       className="fixed left-0 right-0 top-0 z-50 bg-white shadow-sm"
     >
-      <Link href="/" className="block">
+      <Link href="/" className="block ">
         <img
           src={Logo.src}
           alt="Cholewicka EquiPro"
@@ -50,7 +50,7 @@ export default function Header() {
         />
       </Link>
 
-      <nav className="bg-primary">
+      <nav className="bg-[#1A1A1A]">
         <ul className="section-container flex flex-wrap items-center justify-center gap-x-1 gap-y-1 py-3 md:gap-x-6">
           {navLinks.map((link) => (
             <li key={link.label}>

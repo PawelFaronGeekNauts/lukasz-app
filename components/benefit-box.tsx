@@ -17,7 +17,7 @@ export default function BenefitBox({
         <h3 className="mb-3 text-lg uppercase tracking-wide text-primary">
           {title}
         </h3>
-        <p className="text-sm leading-relaxed text-muted">{description}</p>
+        <p className="text-sm leading-relaxed text-black">{description}</p>
       </article>
     </ScrollReveal>
   );

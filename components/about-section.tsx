@@ -20,7 +20,7 @@ export default function AboutSection({
 
 }: AboutSectionProps) {
   return (
-    <section className="py-16 md:py-24">
+    <section className="section-dark py-16 md:py-24 text-white">
       <div className="section-container">
         <ScrollReveal variant="fade-up">
           <h2 className="section-title">{title}</h2>
@@ -49,8 +49,8 @@ export default function AboutSection({
 
         <ScrollReveal variant="fade-up" delay={200}>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="mb-8 leading-relaxed text-muted">{description}</p>
-            <Link href={buttonHref} className="btn-outline">
+            <p className="mb-8 leading-relaxed text-white">{description}</p>
+            <Link href={buttonHref} className="btn-outline-dark">
               {buttonText}
             </Link>
           </div>

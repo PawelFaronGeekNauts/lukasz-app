@@ -23,7 +23,7 @@ export default function WhyWorkWithUsSection({
   benefits = defaultBenefits,
 }: WhyWorkWithUsSectionProps) {
   return (
-    <section className="bg-surface lg:py-24 py-16">
+    <section className="bg-white lg:py-24 py-16">
       <div className="section-container">
         <ScrollReveal variant="fade-up">
           <h2 className="section-title">{title}</h2>

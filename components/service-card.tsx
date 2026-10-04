@@ -33,7 +33,7 @@ export default function ServiceCard({
             {title}
           </Link>
         </h3>
-        <p className="mb-4 flex-1 text-sm leading-relaxed text-muted">
+        <p className="mb-4 flex-1 text-sm leading-relaxed text-black">
           {description}
         </p>
         <Link href={href} className="btn-outline text-xs">
